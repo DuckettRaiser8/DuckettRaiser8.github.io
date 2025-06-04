@@ -2,11 +2,12 @@ body {
     background: rgb(14, 32, 229);
     color: rgb(149, 24, 216);
     padding: 10px;
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
 }
 
 #all-contents {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
 }
 
@@ -16,6 +17,9 @@ nav {
     margin-bottom: 20px auto;
     display: flex;
     padding: 10px;
+    border-style: groove;
+    border-width: 5px;
+
 }
 
 h1 {
@@ -48,6 +52,8 @@ main {
     background: rgb(219, 242, 245);
     display: flex;
     margin-top: 20px;
+    border: 5px solid rgb(81, 2, 2);
+    border-radius: 6px;
 }
 
 .sidebar {
@@ -56,17 +62,24 @@ main {
 }
 
 .sidebar-img {
-    width: 200px;
+    width: 250px;
+    height: 200px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: rgba(0, 29, 16, 0.577)
+
+    
 }
 
 .content {
     flex: 1;
-    padding: 15px;
+    padding: 20px;
 }
 
 /* interests section styles */
 #interests {
-    border: 4px rgb(192, 192, 192) ridge;
+    border: 4px rgb(109, 101, 29) ridge;
+    border-radius: 3px;
     padding: 8px;
     margin-top: 20px;
 }
