@@ -7,6 +7,10 @@ canvas {
   background-image: url("https://m.media-amazon.com/images/I/717RKSg3uxL._AC_UF894,1000_QL80_.jpg");
   background-size: cover;
   background-repeat: no-repeat; 
+  border-style: groove;
+  border-color: blue;
+  border-width: 8px;
+
 }
 
 img {
