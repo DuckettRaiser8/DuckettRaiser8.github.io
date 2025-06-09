@@ -1,12 +1,16 @@
 body {
   margin: 0px;
+  border-radius: 5px;
 }
 
 canvas {
-  background-color: rgb(236, 248, 3);
-  margin: 20px;
+  background-image: url("https://m.media-amazon.com/images/I/717RKSg3uxL._AC_UF894,1000_QL80_.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; 
 }
 
 img {
   display: none;
 }
+
+
