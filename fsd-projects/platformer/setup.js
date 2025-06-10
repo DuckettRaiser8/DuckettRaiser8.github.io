@@ -104,4 +104,7 @@ var collectableList = {
    ruby: { image: "images/collectables/red-ruby.jpeg" },
    emerald: { image: "images/collectables/emerald.jpeg" },
    pinkdiamond: { image: "images/collectables/pink-diamond.jpeg" },
+   golddiamond: { image: "images/collectables/gold diamond.jpeg" },
+   cleardiamond: { image: "images/collectables/clear diamond.jpeg" },
+   treasurechest: { image: "images/collectables/treasure chest.jpeg" },
 };
