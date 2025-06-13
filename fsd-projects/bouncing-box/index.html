@@ -3,25 +3,31 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Bouncing Box</title>
+	<title>Challenging Bouncing Box Game</title>
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
-			width: 70px;
-			height: 70px;
-			background-color: teal;
-			font-size: 300%;
+			width: 100px;
+			height: 100px;
+			background-image: url("data:image/jpeg;base64,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");
+			background-size: cover;
+			font-size: 500%;
 			text-align: center;
 			user-select: none;
 			display: block;
 			position: absolute;
 			top: 100px;
 			/* Change me! */
-			left: 0px;
+			left: 100px;
 		}
 
 		.board {
 			height: 100vh;
+			background-image: url("https://media.istockphoto.com/id/532275374/vector/abstract-underwater-background-illustration-with-water-waves.jpg?s=612x612&w=0&k=20&c=LrTSdk712fwoZkQBGOUPqZJrij5--uwNsrsWFWq8AKA=");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: scroll;
+
 		}
 	</style>
 	<!-- 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
@@ -44,6 +50,8 @@
 			var box = jQuery('.box');	// reference to the HTML .box element
 			var board = jQuery('.board');	// reference to the HTML .board element
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
+			var boardHeight = board.height(); //the maximum Y-coordinate of the screen
+
 
 			// Every 50 milliseconds, call the update Function (see below)
 			setInterval(update, 50);
@@ -52,10 +60,11 @@
 			box.on('click', handleBoxClick);
 
 			// moves the Box to a new position on the screen along the X-Axis
-			function moveBoxTo(newPositionX) {
+			function moveBoxTo(newPositionX, newPositionY) {
 				box.css("left", newPositionX);
+				box.css("top", newPositionY);
 			}
-
+			
 			// changes the text displayed on the Box
 			function changeBoxText(newText) {
 				box.text(newText);
@@ -67,10 +76,12 @@
 
 			// TODO 2 - Variable declarations 
 			var positionX = 0;
+			var positionY = 0;
 			var points = 0;
 			var speed = 10;
-
-
+			var speedY = 10;
+			var randNum1 = Math.random(positionX < boardWidth) * 100;
+			var randNum2 = Math.random(positionY < boardHeight) * 100;
 
 
 			/* 
@@ -79,18 +90,26 @@
 			turn it around! 
 			*/
 			function update() {
-				moveBoxTo(500, 200, 300); //Moves the box to the x-position 300
-				moveBoxTo(positionX); //Moves the box to the far right edge 
+				function moveBoxTo(newPositionX, newPositionY) {
+  				box.css("left", newPositionX);
+ 				 box.css("top", newPositionY);
+				}
+				moveBoxTo(positionX, positionY); //Moves the box to the far right edge 
 				positionX = positionX + speed;
+				positionY = positionY + speed;
 				if (positionX > boardWidth) {
   				speed = speed * -1;
 				}
 				else if (positionX < 0) {
   				speed = speed * -1;
 				}
-
-
-			};
+				else if (positonY > boardHeight){
+					speedY = speedY * -1;
+				}
+				else if (positionY < 0) {
+					speedY = speedY * -1;
+				}
+			}
 
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
@@ -99,6 +118,9 @@
 			*/
 			function handleBoxClick() {
 				positionX = 0;
+				positionY = 0;
+				randNum1 = 0;
+				randNum2 = 0
 				points = points + 1; // Adds 1 to 
 				speed = 3 * points + 10;
 				changeBoxText(points);
