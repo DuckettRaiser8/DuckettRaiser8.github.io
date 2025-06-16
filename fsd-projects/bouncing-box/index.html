@@ -52,7 +52,7 @@
 			var boardWidth = board.width();	// the maximum X-Coordinate of the screen
 
 			// Every 50 milliseconds, call the update Function (see below)
-			setInterval(update, 50);
+			var interval = setInterval(update, 50);
 
 			// Every time the box is clicked, call the handleBoxClick Function (see below)
 			box.on('click', handleBoxClick);
@@ -79,8 +79,7 @@
 			var points = 0;
 			var speed = 10;
 			var speedY = 10;
-			var randNum1 = Math.random() * boardWidth;
-			var randNum2 = Math.random() * boardHeight;
+			var misclicks = 0;
 
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -115,12 +114,17 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				positionX = randNum1 + randNum1;
-				positionY = randNum2 + randNum2;
+				positionX = Math.random() * boardWidth;
+				positionY =  Math.random() * boardHeight;
 				points = points + 1; // Adds 1 to 
 				speed = 3 * points + 10;
-				changeBoxText(points);
+				changeBoxText(points);				
 			};
+
+			//This function will end the game once the board is clicked on 10 times. Each
+			function endGame() {
+			clearInterval(interval);
+			}
 
 		})();
 	</script>
