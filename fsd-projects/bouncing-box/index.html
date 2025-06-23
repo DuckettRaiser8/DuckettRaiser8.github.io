@@ -22,7 +22,7 @@
 			border-radius: 5px;
 			border-style: groove;
 			border-width: 5px;
-			border-color: black;
+			border-color: rgb(0, 0, 0);
 
 		}
 
@@ -84,7 +84,18 @@
 			var points = 0;
 			var speed = 10;
 			var speedY = 10;
+
+			function endGame() {
 			var misclicks = 0;
+			if (box.on) {
+			}
+			else if (box.off){
+				misclicks = misclicks + 1;
+			}
+			else if (misclicks === 10){
+				clearInterval(interval);
+			}
+			}
 
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -119,18 +130,12 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				positionX = Math.random() * boardWidth;
-				positionY =  Math.random() * boardHeight;
-				points = points + 1; // Adds 1 to 
-				speed = 3 * points + 10;
-				changeBoxText(points);				
-			};
-
-			//This function will end the game once the board is clicked on 10 times. Each
-			function endGame() {
-			clearInterval(interval);
-			}
-
+					positionX = Math.random() * boardWidth;
+					positionY =  Math.random() * boardHeight;
+					points = points + 1; // Adds 1 to 
+					speed = 3 * points + 10;
+					changeBoxText(points);	
+				}
 		})();
 	</script>
 </body>
