@@ -1,3 +1,5 @@
 body {
-    background-color: lightblue;
+    background-image: url("https://media.istockphoto.com/id/1488272205/photo/detail-of-modern-blue-brick-wall-background-photo-blue-light-brick-wall-texture-background.jpg?s=612x612&w=0&k=20&c=kBEY8oE2j1Tp0KJ_U-_XZsmQ64rrJktPyuoUetjUoz4=");
+    background-repeat:no-repeat;
+    background-size: cover;
 }
