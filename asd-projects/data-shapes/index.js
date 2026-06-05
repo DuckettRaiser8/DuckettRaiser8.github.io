@@ -61,6 +61,8 @@ $(document).ready(function () {
   // TODO 3-a: add a function that handles the static display type
 
   function handleStatic(data) {
+    setBackgroundWithObject(data);
+    animationDetails.displayType = 1;
   }
 
   // TODO 4-a: add a function that handles the good display type
@@ -73,7 +75,7 @@ $(document).ready(function () {
 
   function staticDisplay() {
     // TODO 3-b: call your handleStatic function
-    handleStatic();
+    handleStatic(currentShape);
   }
 
   function goodDisplay() {
