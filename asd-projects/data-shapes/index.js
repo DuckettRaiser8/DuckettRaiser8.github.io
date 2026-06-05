@@ -34,32 +34,38 @@ $(document).ready(function () {
   // ALL OF YOUR CODE SHOULD GO BELOW HERE ////////
   /////////////////////////////////////////////////
 
-// TODO 0 complete
+  // TODO 0 complete
 
   // TODO 1: create a new shape object and add it to the array
-  
-var shape = {
-  color: "blue",
-  shape: "circle",
-  repeat: 3,
-}
-dataShapes.push(shape)
+
+  var shape = {
+    color: "blue",
+    shape: "circle",
+    repeat: 3,
+  };
+  dataShapes.push(shape);
 
   // TODO 2: add a new property to all data shapes
-  
-  for(var i = 0; count <= dataShapes; i++){
-    var currentShape = datashape[i],
+
+  for (var i = 0; i < dataShapes.length; i++) {
+    var currentShape = dataShapes[i];
+    if (currentShape.color === "red") {
+      currentShape.goodBehavior = "bounce";
+    } else if (currentShape.color === "blue") {
+      currentShape.goodBehavior = "blink";
+    } else {
+      currentShape.goodBehavior = "spin";
+    }
   }
 
-
   // TODO 3-a: add a function that handles the static display type
-  
+
+  function handleStatic(data) {
+  }
 
   // TODO 4-a: add a function that handles the good display type
-  
 
   // TODO 5-a: add a function that handles the bad display type
-  
 
   /////////////////////////////////////////////////
   // BUTTON HANDLERS BELOW HERE (3-b, 4-b, 5-b) ///
@@ -67,17 +73,15 @@ dataShapes.push(shape)
 
   function staticDisplay() {
     // TODO 3-b: call your handleStatic function
-    
+    handleStatic();
   }
 
   function goodDisplay() {
     // TODO 4-b: call your handleGood function
-    
   }
 
   function badDisplay() {
     // TODO 5-b: call your handleBad function
-    
   }
 
   /////////////////////////////////////////////////
@@ -139,7 +143,7 @@ dataShapes.push(shape)
     $("#shape").css("top", "150px");
     $("#shape").css("transform", "rotate(0deg)");
     $("#shape").html(
-      `<p>${shapeData.color}</p> <p>${shapeData.shape}</p> <p>${shapeData.repeat}x${shapeData.repeat}</p> <p>${shapeData.goodBehavior}</p>`
+      `<p>${shapeData.color}</p> <p>${shapeData.shape}</p> <p>${shapeData.repeat}x${shapeData.repeat}</p> <p>${shapeData.goodBehavior}</p>`,
     );
 
     $("#info-bar").text(`Current index: ${currentIndex}`);
