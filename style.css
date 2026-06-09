@@ -118,3 +118,10 @@ h2, h3 {
   text-decoration: none;
   color: rgb(149, 24, 216);
 }
+
+#die {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(211, 211, 211); /* Feel free to customize */
+  position: relative;
+}
