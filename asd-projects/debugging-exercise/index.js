@@ -32,7 +32,7 @@ for (var i = 0; i < maxGhosts; i++) {
 
 // calling this function first starts a 5 second countdown
 // after the countdown, the update function will be called repeatedly 25 times per second
-startProgram();
+
 
 ///////////////////////////
 // startup helper functions
@@ -141,7 +141,7 @@ function bounceGhost(ghost) {
     ghost.speedX *= -1;
   }
   // this bounces off the right wall
-  if (ghost.x > boardWidth) {
+  if (ghost .x > boardWidth) {
     ghost.x -= ghost.speedX;
     ghost.speedX *= -1;
   }
