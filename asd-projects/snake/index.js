@@ -226,22 +226,13 @@ function hasCollidedWithSnake() {
     head and each part of the snake's body also knows its own row and column.
   */
 
-  for (var i = 0; i > 0; i++) {
-    if (snake.head.row === snake.body[i].row){
+  for (var i = 1; i > 0; i--) {
+    if (snake.head.row === snake.body[i].row && snake.head.column === snake.body[i].column){
       return true;
     }
-    else if (snake.head.row === snake.body[i - 1].row){
-      return true;
-    }
-      else if (snake.head.column === snake.body[i].column){
-        return true;
-      }
-      else if (snake.head.column === snake.body[i -1].column){
-        return true;
-      }
-    else {
-      return false;
-    }
+
+    return false;
+    
   }
 }
 
