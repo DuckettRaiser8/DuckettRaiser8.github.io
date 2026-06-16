@@ -12,6 +12,8 @@ var highScoreElement = $("#highScore");
 // Game Variables
 var score = 0; // variable to keep track of the score
 var started = false; // variable to keep track of whether the game has started
+var colors = ["red", "orange", "yellow", "green", "blue", "purple"];
+var colorIndex = {};
 
 // TODO 4, Part 1: Create the apple variable
 
@@ -212,7 +214,7 @@ function handleAppleCollision() {
   var row = snake.tail.row;
   var column = snake.tail.column;
 
-  makeSnakeSquare(row, column);
+  makeSnakeSquare(row, column,);
 }
 
 function hasCollidedWithSnake() {
@@ -224,7 +226,7 @@ function hasCollidedWithSnake() {
     head and each part of the snake's body also knows its own row and column.
   */
 
-  for (var i = 1; i < 0; i++) {
+  for (var i = 1; i < snake.body.length; i++) {
     if (snake.head.row === snake.body[i].row && snake.head.column === snake.body[i].column){
       return true;
     }
@@ -302,6 +304,8 @@ function makeSnakeSquare(row, column) {
   // add the square to the snake’s body and update the tail
   snake.body.push(snakeSquare);
   snake.tail = snakeSquare;
+    snake.tail.element.css("backgroundColor", colors[colorIndex]);
+    colorIndex++;
 }
 
 /* 
@@ -363,6 +367,12 @@ function getRandomAvailablePosition() {
       not occupied by a snakeSquare in the snake's body. If it is then set 
       spaceIsAvailable to false so that a new position is generated.
     */
+
+      for(i = 0; i < snake.body.length; i++){
+        if(snake.body[i].row === randomPosition.row && snake.body[i].column === randomPosition.column){
+          spaceIsAvailable = false;
+        }
+      }
   }
 
   return randomPosition;
@@ -380,3 +390,7 @@ function calculateHighScore() {
 
   return highScore;
 }
+
+
+
+
