@@ -47,7 +47,6 @@ function runProgram() {
   */
   function newFrame() {
     repositionGameItem();
-    //redrawGameItem();
   }
 
   /* 
@@ -60,15 +59,19 @@ function runProgram() {
     console.log(event.which);
     if (event.which === KEY.LEFT) {
       console.log("left pressed");
+      walker.speedX = -5;
     }
     if (event.which === KEY.RIGHT) {
       console.log("right pressed");
+      walker.speedX = 5;
     }
     if (event.which === KEY.UP) {
       console.log("up pressed");
+      walker.speedY = 5;
     }
     if (event.which === KEY.DOWN) {
       console.log("down pressed");
+      walker.speedY = -5;
     }
   }
 
@@ -86,14 +89,8 @@ function runProgram() {
 
 function repositionGameItem(){
   walker.x = walker.x + walker.speedX;
-  walker.y = walker.y + walker.speedY; 
-  console.log(walker.x, walker.y);
+  walker.y = walker.y + walker.speedY;
+  console.log(walker.x, walker.y)
 }
 
-/*function redrawGameItem(){
-  $("#walker").css("left", walker.x);
-  $("#walker").css("top", walker.y);
 }
-*/
-}
-

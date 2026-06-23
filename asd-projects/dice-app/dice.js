@@ -1,5 +1,6 @@
 $(document).ready(function () {
   // Your code goes here
+  
 $("<div>")
   .css("height", 15)
   .css("width", 15)
