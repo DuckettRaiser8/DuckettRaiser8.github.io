@@ -11,7 +11,7 @@ body {
   position: relative;
 }
 
-#gameItem {
+#walker {
   background-color: rgb(28, 45, 196);
   width: 40px;
   height: 40px;
