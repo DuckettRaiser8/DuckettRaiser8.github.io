@@ -13,8 +13,8 @@ function runProgram() {
   var walker = {
     x: 0,
     y: 0,
-    speedX: 0,
-    speedY: 0,
+    speedX: 3,
+    speedY: 4,
   };
 
   // Game Item Objects
@@ -121,13 +121,13 @@ function wallCollision(){
   if(walker.x > 380){
       walker.x -= walker.speedX;
   }
-   if(walker.x <= -5){
+   if(walker.x <= 0){
     walker.x -= walker.speedX;
   }
    if(walker.y > 380){
     walker.y -= walker.speedY;
   }
-   if(walker.y <= -5){
+   if(walker.y <= 0){
       walker.y -= walker.speedY;
   }
 }
