@@ -13,8 +13,8 @@ function runProgram() {
   var walker = {
     x: 0,
     y: 0,
-    speedX: 1,
-    speedY: 2,
+    speedX: 0,
+    speedY: 0,
   };
 
   // Game Item Objects
@@ -60,19 +60,19 @@ function runProgram() {
     console.log(event.which);
     if (event.which === KEY.LEFT) {
       console.log("left pressed");
-      walker.speedX += -5;
+      walker.speedX = -5;
     }
     if (event.which === KEY.RIGHT) {
       console.log("right pressed");
-      walker.speedX += 5;
+      walker.speedX = 5;
     }
     if (event.which === KEY.UP) {
       console.log("up pressed");
-      walker.speedY += 5;
+      walker.speedY = 5;
     }
     if (event.which === KEY.DOWN) {
       console.log("down pressed");
-      walker.speedY += -5;
+      walker.speedY = -5;
     }
   }
 
