@@ -11,10 +11,10 @@ function runProgram() {
   var FRAME_RATE = 60;
   var FRAMES_PER_SECOND_INTERVAL = 1000 / FRAME_RATE;
   var walker = {
-    x: 7,
-    y: 8,
-    speedX: 6,
-    speedY: 9,
+    x: 0,
+    y: 0,
+    speedX: 1,
+    speedY: 2,
   };
 
   // Game Item Objects
