@@ -20,8 +20,10 @@ function resetAndRender() {
 // all of your apply functions
 function applyAndRender() {
   // Multiple TODOs: Call your apply function(s) here
-  applyFilterNoBackground(decreaseBlue);
+  applyFilterNoBackground(increaseGreenbyBlue);
   applyFilter(decreaseBlue);
+  applyFilterNoBackground(reddify);
+  applyFilter(increaseGreenbyBlue);
 
   // do not change the below line of code
   render($("#display"), image);
