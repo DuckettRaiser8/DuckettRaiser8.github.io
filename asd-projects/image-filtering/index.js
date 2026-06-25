@@ -20,8 +20,8 @@ function resetAndRender() {
 // all of your apply functions
 function applyAndRender() {
   // Multiple TODOs: Call your apply function(s) here
-  applyFilter(decreaseBlue);
   applyFilterNoBackground(decreaseBlue);
+   applyFilter(decreaseBlue);
 
   // do not change the below line of code
   render($("#display"), image);
@@ -53,10 +53,10 @@ function applyFilterNoBackground(filterFunction) {
   for (var i = 0; i < image.length; i++) {
     for (var j = 0; j < image[i].length; j++) {
             var pixel = image[i][j];
-      if (image[i][j] !== backgroundColor) {
-        pixel = rgbStringToArray(backgroundColor);
+      if (pixel !== backgroundColor) {
+        rgbStringToArray(pixel);
         filterFunction(pixel);
-        pixelArray = rgbArrayToString(pixel);
+        rgbArrayToString(pixel);
       }
     }
   }

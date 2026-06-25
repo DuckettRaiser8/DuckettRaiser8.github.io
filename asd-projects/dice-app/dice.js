@@ -1,6 +1,7 @@
 $(document).ready(function () {
   // Your code goes here
   
+
 $("<div>")
   .css("height", 15)
   .css("width", 15)
@@ -9,6 +10,7 @@ $("<div>")
   .css("top", 50)
   .css("left", 50)
   .appendTo("#die");
+  
 });
 
 function makeDot(top, left, elementID){
