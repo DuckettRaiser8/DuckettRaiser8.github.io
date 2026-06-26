@@ -74,11 +74,20 @@ $(document).ready(function () {
 
   // TODO 5-a: add a function that handles the bad display type
 
-function handleBad(data, repeat){
+/*function handleBad(data, repeat){
   repeat++;
   setBackgroundWithMixed(data, repeat);
   animationDetails.displayType = 3;
 }
+ */
+function handleBad(data, repeat){
+  repeat++;
+  resetDisplay();
+  currentIndex =  Math.ceil(Math.random() * 26);
+  setBackgroundWithMixed(data, repeat);
+  resetDisplay();
+}
+
 
   /////////////////////////////////////////////////
   // BUTTON HANDLERS BELOW HERE (3-b, 4-b, 5-b) ///
