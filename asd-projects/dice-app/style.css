@@ -4,3 +4,17 @@
   background-color: rgb(83, 135, 212); /* Feel free to customize */
   position: relative;
 }
+
+#die2 {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(216, 117, 24); /* Feel free to customize */
+  position: relative;
+}
+
+#die3 {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(37, 181, 18); /* Feel free to customize */
+  position: relative;
+}
