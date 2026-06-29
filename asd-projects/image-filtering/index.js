@@ -24,7 +24,7 @@ function applyAndRender() {
   //applyFilter(decreaseBlue);
   //applyFilterNoBackground(reddify);
   //applyFilter(increaseGreenbyBlue);
-  applyFilterNoBackground(vintage);
+  applyFilterNoBackground(increaseTurquoise);
 
   // do not change the below line of code
   render($("#display"), image);
@@ -118,4 +118,11 @@ function inversion(pixelArray){
     pixelArray[BLUE] = keepInBounds(pixelArray[BLUE]);
   pixelArray[GREEN] = 255 - pixelArray[GREEN];
     pixelArray[GREEN] = keepInBounds(pixelArray[GREEN]);
+}
+
+function increaseTurquoise(pixelArray){
+   pixelArray[GREEN] = pixelArray[GREEN] + 50;
+    pixelArray[GREEN] = keepInBounds(pixelArray[GREEN]);
+  pixelArray[BLUE] = pixelArray[BLUE] + 50;
+  pixelArray[BLUE] = keepInBounds(pixelArray[BLUE]);
 }
