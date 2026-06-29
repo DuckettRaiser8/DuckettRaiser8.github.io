@@ -13,7 +13,7 @@ var highScoreElement = $("#highScore");
 var score = 0; // variable to keep track of the score
 var started = false; // variable to keep track of whether the game has started
 var colors = ["red", "orange", "yellow", "green", "blue", "purple"];
-var colorIndex = {};
+var colorIndex = colors[Math.ceil(Math.random() * 6)];
 
 // TODO 4, Part 1: Create the apple variable
 
@@ -215,6 +215,8 @@ function handleAppleCollision() {
   var column = snake.tail.column;
 
   makeSnakeSquare(row, column,);
+  snake.tail.element.css("backgroundColor", colors[colorIndex]);
+  colorIndex++;
 }
 
 function hasCollidedWithSnake() {
@@ -304,8 +306,6 @@ function makeSnakeSquare(row, column) {
   // add the square to the snake’s body and update the tail
   snake.body.push(snakeSquare);
   snake.tail = snakeSquare;
-    snake.tail.element.css("backgroundColor", colors[colorIndex]);
-    colorIndex++;
 }
 
 /* 

@@ -20,10 +20,11 @@ function resetAndRender() {
 // all of your apply functions
 function applyAndRender() {
   // Multiple TODOs: Call your apply function(s) here
-  applyFilterNoBackground(increaseGreenbyBlue);
-  applyFilter(decreaseBlue);
-  applyFilterNoBackground(reddify);
-  applyFilter(increaseGreenbyBlue);
+  //applyFilterNoBackground(increaseGreenbyBlue);
+  //applyFilter(decreaseBlue);
+  //applyFilterNoBackground(reddify);
+  //applyFilter(increaseGreenbyBlue);
+  applyFilterNoBackground(vintage);
 
   // do not change the below line of code
   render($("#display"), image);
@@ -96,3 +97,25 @@ function increaseGreenbyBlue(pixelArray) {
 }
 
 // CHALLENGE code goes below here
+
+function increasePurple(pixelArray) {
+  pixelArray[RED] = pixelArray[RED] + 50;
+    pixelArray[RED] = keepInBounds(pixelArray[RED]);
+  pixelArray[BLUE] = pixelArray[BLUE] + 50;
+  pixelArray[BLUE] = keepInBounds(pixelArray[BLUE]);
+}
+
+function grayscale(pixelArray){
+  pixelArray[GREEN] = pixelArray[RED];
+   pixelArray[BLUE] = pixelArray[RED];
+   pixelArray[GREEN] = pixelArray[BLUE]
+}
+
+function inversion(pixelArray){
+  pixelArray[RED] = 255 - pixelArray[RED];
+    pixelArray[RED] = keepInBounds(pixelArray[RED]);
+  pixelArray[BLUE] = 255 - pixelArray[BLUE];
+    pixelArray[BLUE] = keepInBounds(pixelArray[BLUE]);
+  pixelArray[GREEN] = 255 - pixelArray[GREEN];
+    pixelArray[GREEN] = keepInBounds(pixelArray[GREEN]);
+}
