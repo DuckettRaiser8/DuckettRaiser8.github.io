@@ -24,7 +24,7 @@ function applyAndRender() {
   //applyFilter(decreaseBlue);
   //applyFilterNoBackground(reddify);
   //applyFilter(increaseGreenbyBlue);
-  applyFilterNoBackground(increaseTurquoise);
+  applyFilterNoBackground(increaseBluebyRed);
 
   // do not change the below line of code
   render($("#display"), image);
@@ -124,5 +124,31 @@ function increaseTurquoise(pixelArray){
    pixelArray[GREEN] = pixelArray[GREEN] + 50;
     pixelArray[GREEN] = keepInBounds(pixelArray[GREEN]);
   pixelArray[BLUE] = pixelArray[BLUE] + 50;
+  pixelArray[BLUE] = keepInBounds(pixelArray[BLUE]);
+}
+
+function increaseYellow(pixelArray){
+  pixelArray[GREEN] = pixelArray[GREEN] + 50;
+    pixelArray[GREEN] = keepInBounds(pixelArray[GREEN]);
+  pixelArray[RED] = pixelArray[RED] + 50;
+  pixelArray[RED] = keepInBounds(pixelArray[RED]);
+}
+
+function whiteOut(pixelArray){
+   pixelArray[GREEN] = pixelArray[GREEN] + 50;
+    pixelArray[GREEN] = keepInBounds(pixelArray[GREEN]);
+  pixelArray[RED] = pixelArray[RED] + 50;
+  pixelArray[RED] = keepInBounds(pixelArray[RED]);
+   pixelArray[BLUE] = pixelArray[BLUE] + 50;
+    pixelArray[BLUE] = keepInBounds(pixelArray[BLUE]);
+}
+
+function increaseRedbyGreen(pixelArray) {
+  pixelArray[RED] = pixelArray[GREEN] + pixelArray[RED];
+  pixelArray[RED] = keepInBounds(pixelArray[RED]);
+}
+
+function increaseBluebyRed(pixelArray) {
+  pixelArray[BLUE] = pixelArray[RED] + pixelArray[BLUE];
   pixelArray[BLUE] = keepInBounds(pixelArray[BLUE]);
 }
