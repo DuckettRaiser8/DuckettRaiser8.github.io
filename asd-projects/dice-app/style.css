@@ -18,3 +18,10 @@
   background-color: rgb(37, 181, 18); /* Feel free to customize */
   position: relative;
 }
+
+#die4 {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(181, 18, 162); /* Feel free to customize */
+  position: relative;
+}

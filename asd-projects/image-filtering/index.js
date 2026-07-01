@@ -24,7 +24,7 @@ function applyAndRender() {
   //applyFilter(decreaseBlue);
   //applyFilterNoBackground(reddify);
   //applyFilter(increaseGreenbyBlue);
-  applyFilterNoBackground(increaseBluebyRed);
+  applyFilterNoBackground(whiteOut);
 
   // do not change the below line of code
   render($("#display"), image);
