@@ -35,7 +35,7 @@ if(right - left > 0){
     if(left < index - 1){
         await quickSort(array, left, index - 1);
     }
-    else if(rigjt > index){
+    else if(right > index){
         await quickSort(array, index, right);
     }
 }
